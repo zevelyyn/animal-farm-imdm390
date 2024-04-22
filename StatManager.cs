@@ -70,9 +70,10 @@ public class StatManager : MonoBehaviour
 
         money += revenue / rate;
         money -= operationCost / rate;
-        revenue = pricePerChicken * rateSold;
+        revenue = (pricePerChicken + ((health - 50) / 50)) * rateSold;
         death = health / 50f;
         density = population / capacity;
+        // pricePerChicken = 
     }
 
     // Updates when food upgrade is bought
